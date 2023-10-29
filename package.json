@@ -1,0 +1,15 @@
+{
+  "name": "frontend-algorithm",
+  "version": "1.0.0",
+  "description": "本仓库主要是记录一些前端必须会的算法，掌握一些基本的核心“套路”",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
