@@ -17,8 +17,11 @@
 - 回文串 [回文串算法](./src/palind_rome) 10.29
 - 前缀和数组 [前缀和思想](./src/pre_sum)  10.30
 - 差分数组 [差分思想](./src/difference/) 10.31
+- LRU [缓存淘汰思想](./src/LRU/) 10.31 test case 似乎还有遗漏
 
 # TODO
 1. 集成 github ci，在提交代码后跑一遍单测
 2. 集成 husky，将 commit message 进行规范
 3. 探索 github 托管这些文件，构建成一个托管服务器
+4. 在 leetcode 上找到相关联的题目
+5. 添加 Eslint 规范代码
