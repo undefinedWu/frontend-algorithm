@@ -1,16 +1,16 @@
 export class LRU {
   private capacity: number
-  hashMap: Record<number, Node>;
+  map: Record<number, Node>;
   double_linked_list: DoubleLinkedList;
   
   constructor(capacity: number) {
     this.capacity = capacity;
-    this.hashMap = {};
+    this.map = {};
     this.double_linked_list = new DoubleLinkedList();
   }
 
   get(key: number) {
-    let node = this.hashMap[key];
+    let node = this.map[key];
     if (!node) {
       return null
     }
@@ -19,7 +19,7 @@ export class LRU {
   }
 
   put(key: number, value: number) {
-    let temp_node = this.hashMap[key];
+    let temp_node = this.map[key];
 
     if (temp_node) {
       // 删除节点
@@ -44,7 +44,7 @@ export class LRU {
 
   // 让一个已经存在的节点变成最新的节点
   private make_recently(key: number) {
-    const node = this.hashMap[key];
+    const node = this.map[key];
     // 删除旧节点
     this.double_linked_list.remove(node);
     // 添加到最新访问的
@@ -54,14 +54,14 @@ export class LRU {
   // 新添加一个一个节点
   private add_recently(key: number, value: number) {
     const node = new Node(key, value);
-    this.hashMap[key] = node;
+    this.map[key] = node;
     return this.double_linked_list.addLast(node);
   }
 
   // 删除任意节点 by key
   private delete_node_by_key(key: number) {
-    const node = this.hashMap[key];
-    delete this.hashMap[key];
+    const node = this.map[key];
+    delete this.map[key];
     this.double_linked_list.remove(node)
   }
 
@@ -70,8 +70,8 @@ export class LRU {
     // 已经移除了当前节点
     let node = this.double_linked_list.removeFirst()
     if (node) {
-      // 似乎有点重复工作
-      this.delete_node_by_key(node.key);
+      // 主要是为了删除对应的 key
+      delete this.map[node.key]
     }
   }
 }
