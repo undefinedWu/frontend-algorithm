@@ -24,12 +24,10 @@ LRU(least recently used),简单理解就是，最近使用过的数据是有用�
 // 不过本期不会设计到散列函数，所以简单的认为是数字对应
 // 此处存储 key 不仅仅是为了考虑 hash 表的哈希冲突
 // 也是为了解决
-type Node = {
-  key: number;
-  value: number;
-  prev: Node | undefined;
-  next: Node | undefined;
+interface Node {
+  key: number
+  value: number
+  prev: Node | undefined
+  next: Node | undefined
 }
-
-
 ```

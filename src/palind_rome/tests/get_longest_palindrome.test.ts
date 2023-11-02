@@ -1,6 +1,6 @@
-import { get_longest_palindrome } from "../get_longest_palindrome"
+import { get_longest_palindrome } from '../get_longest_palindrome'
 
-test("get_longest_palindrome", () => {
-  expect(get_longest_palindrome("cab")).toMatch(/a|b|c/);
-  expect(get_longest_palindrome("acaba")).toMatch(/(aba|aca)/)
+it('get_longest_palindrome', () => {
+  expect(get_longest_palindrome('cab')).toMatch(/a|b|c/)
+  expect(get_longest_palindrome('acaba')).toMatch(/(aba|aca)/)
 })
