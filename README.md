@@ -26,4 +26,4 @@
 2. 集成 husky，将 commit message 进行规范
 3. 探索 github 托管这些文件，构建成一个托管服务器
 4. 在 leetcode 上找到相关联的题目
-5. ~~添加 Eslint 规范代码 11.02 fixed ~~
+5. ~~添加 Eslint 规范代码 11.02 fixed~~
