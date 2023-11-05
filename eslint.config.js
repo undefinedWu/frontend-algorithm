@@ -1,3 +1,5 @@
-const { antfu } = require('@antfu/eslint-config')
+const antfu = require('@antfu/eslint-config').default
 
-module.exports = antfu({})
+module.exports = antfu({}, {
+  files: ['**/*.ts'],
+})

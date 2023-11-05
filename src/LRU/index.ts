@@ -25,7 +25,7 @@ export class LRU {
       // 删除节点
       this.delete_node_by_key(key)
       // 添加新节点到最前
-      return this.add_recently(key, value) 
+      return this.add_recently(key, value)
     }
 
     if (this.double_linked_list.size >= this.capacity) {

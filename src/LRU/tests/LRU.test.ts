@@ -25,7 +25,7 @@ it('lRU', () => {
 
   // 修改已有节点的值
   lru.put(2, 3)
-  const new_node = doubleLinkedList.remove(doubleLinkedList.head.next)
+  doubleLinkedList.remove(doubleLinkedList.head.next)
   doubleLinkedList.addLast(new Node(2, 3))
   expect(lru.double_linked_list).toEqual(doubleLinkedList)
 })
